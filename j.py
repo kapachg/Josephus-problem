@@ -6,7 +6,7 @@ def highest_power(N):   # Calculates the highest power of two that is not large 
         if 2**i > N : return 2**(i-1)
         else: i += 1
     
-def survivor(N):           # Returns the position of the surviver relative to the first killer, given N people 
+def survivor(N):           # Returns the position of the survivor relative to the first killer, given N people 
     h = highest_power(N)
     return 2 * (N-h) + 1
     
