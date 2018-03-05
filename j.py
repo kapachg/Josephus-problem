@@ -6,7 +6,7 @@ def highest_power(N):   # Calculates the highest power of two that is not large 
         if 2**i > N : return 2**(i-1)
         else: i += 1
     
-def surviver(N):           # Returns the position of the surviver relative to the first killer, given N people 
+def survivor(N):           # Returns the position of the surviver relative to the first killer, given N people 
     h = highest_power(N)
     return 2 * (N-h) + 1
     
@@ -22,7 +22,7 @@ N = int(input("How many people are standing in the circle? "))
 circle_of_death = [i+1 for i in range(N)]
 i = 0   # first killer (starting with 0, ie the first)
 n = len(circle_of_death)
-show_process = False  # Show all the killings or just the surviver
+show_process = False  # Show all the killings or just the survivor
 
 while (n > 1) :
     i = circle_view(circle_of_death, i+1)
@@ -32,4 +32,4 @@ while (n > 1) :
     n = len(circle_of_death)    
 
 print("Number",circle_of_death[0],"survives")
-circle_of_death[0] == surviver(N)
+circle_of_death[0] == survivor(N)
